@@ -5,10 +5,12 @@ namespace Chronometer
     {
         static void Main()
         {
+            Console.WriteLine("Write \"start\" and press Enter to run the timer.");
             var chronometer = new Chronometer();
             string line;
             while ((line = Console.ReadLine()) != "exit")
             {
+                Console.WriteLine("Write \"lap\" to split the Lap.");
                 if (line?.ToLower() == "start")
                 {
                     Task.Run(() => chronometer.Start());
